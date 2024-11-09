@@ -1,4 +1,6 @@
 ---
+import Nav from '@/components/Nav.astro'
+
 interface Props {
   title: string
 }
@@ -16,7 +18,8 @@ const { title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-neutral-900 text-neutral-200">
+    <Nav />
     <slot />
   </body>
 </html>
