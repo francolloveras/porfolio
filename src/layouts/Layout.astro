@@ -20,3 +20,16 @@ const { title } = Astro.props
     <slot />
   </body>
 </html>
+<style is:global>
+  @font-face {
+    font-family: 'Rubik';
+    src: url('fonts/rubik.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Rubik', sans-serif;
+  }
+</style>
