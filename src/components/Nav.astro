@@ -1,11 +1,10 @@
 ---
 import Language from '@/icons/Language.astro'
 import DarkMode from '@/icons/DarkMode.astro'
-import ArrowOutward from '@/icons/ArrowOutward.astro'
 ---
 
 <nav class="py-4 mx-20 flex justify-between items-center text-neutral-100">
-  <div class="w-[188.58px]"></div>
+  <div class="w-[56px]"></div>
   <ul class="flex items-center gap-4">
     <li class="hover:text-red-400 transition-colors">
       <a href="#experience">Experience</a>
@@ -19,23 +18,20 @@ import ArrowOutward from '@/icons/ArrowOutward.astro'
     <li class="hover:text-red-400 transition-colors">
       <a href="#contact">Contact</a>
     </li>
+    <li class="hover:text-red-400 transition-colors">
+      <a href="/today-i-learned">Blog</a>
+    </li>
   </ul>
   <ul class="flex items-center gap-4">
-    <li class="size-5">
+    <li class="size-[22px]">
       <button class="hover:text-red-400 transition-colors">
         <DarkMode />
       </button>
     </li>
-    <li class="size-5">
+    <li class="size-[22px]">
       <button class="hover:text-red-400 transition-colors">
         <Language />
       </button>
-    </li>
-    <li class="hover:text-red-400 transition-colors">
-      <a href="/today-i-learned" target="_blank" class="inline-flex items-start gap-0.5">
-        Today I Learned
-        <ArrowOutward class="size-4" />
-      </a>
     </li>
   </ul>
 </nav>
