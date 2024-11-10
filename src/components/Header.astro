@@ -1,0 +1,53 @@
+---
+import Document from '@/icons/Document.astro'
+import LinkedIn from '@/icons/LinkedIn.astro'
+import GitHub from '@/icons/GitHub.astro'
+---
+
+<header class="flex flex-col w-[832px] gap-y-2">
+  <section class="flex gap-y-4 flex-col">
+    <img src="/profile-picture.jpg" alt="Franco Lloveras" class="size-24 rounded-full shadow-md" />
+    <h1 class="text-4xl uppercase">
+      <span class="font-semibold">Franco</span>
+      <span class="font-light">Lloveras</span>
+    </h1>
+  </section>
+  <section class="max-w-2xl text-lg text-neutral-400">
+    <p class="mb-2">
+      Web developer with <strong class="text-neutral-300 font-medium">+1 year of experience</strong>
+      from Argentina 🇦🇷.
+    </p>
+    <p>
+      Working with JavaScript, TypeScript, React, Next.js, Node.js, Astro and more. Enthusiast of
+      modern programming and scalable code.
+    </p>
+  </section>
+  <section class="flex gap-x-3 mt-4">
+    <a
+      href="/curriculum-en.pdf"
+      target="_blank"
+      class="px-6 py-1 rounded-lg flex items-center gap-x-2 border border-neutral-900 bg-neutral-600 shadow-md hover:bg-red-600 transition-colors"
+    >
+      <span class="block size-4"><Document /></span>
+      Curriculum
+    </a>
+    <a
+      href="https://www.linkedin.com/in/franco-lloveras-3562722b2"
+      target="_blank"
+      referrerpolicy="no-referrer"
+      class="px-6 py-1 rounded-lg flex items-center gap-x-2 border border-neutral-900 bg-neutral-600 shadow-md hover:bg-red-600 transition-colors"
+    >
+      <span class="block size-4"><LinkedIn /></span>
+      LinkedIn
+    </a>
+    <a
+      href="https://github.com/francolloveras"
+      target="_blank"
+      referrerpolicy="no-referrer"
+      class="px-6 py-1 rounded-lg flex items-center gap-x-2 border border-neutral-900 bg-neutral-600 shadow-md hover:bg-red-600 transition-colors"
+    >
+      <span class="block size-4"><GitHub /></span>
+      GitHub
+    </a>
+  </section>
+</header>
