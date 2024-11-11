@@ -18,15 +18,21 @@ const { title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="flex gap-y-20 items-center flex-col w-full bg-neutral-900 text-neutral-200">
+  <body class="space-y-20 bg-neutral-900 text-neutral-200">
     <Nav />
-    <slot />
+    <div class="max-w-3xl space-y-96 mx-auto">
+      <slot />
+    </div>
   </body>
 </html>
 <style is:global>
   @font-face {
     font-family: 'Rubik';
     src: url('/fonts/rubik.ttf') format('truetype');
+  }
+
+  :root {
+    scroll-behavior: smooth;
   }
 
   body {
