@@ -3,35 +3,36 @@ import Language from '@/icons/Language.astro'
 import DarkMode from '@/icons/DarkMode.astro'
 ---
 
-<nav class="flex justify-between items-center py-4 px-20 w-full text-neutral-300">
-  <div class="w-[56px]"></div>
-  <ul class="flex items-center gap-4">
-    <li class="hover:text-red-400 transition-colors">
-      <a href="#experience">Experience</a>
-    </li>
-    <li class="hover:text-red-400 transition-colors">
-      <a href="#projects">Projects</a>
-    </li>
-    <li class="hover:text-red-400 transition-colors">
-      <a href="#about-me">About me</a>
-    </li>
-    <li class="hover:text-red-400 transition-colors">
-      <a href="#contact">Contact</a>
-    </li>
-    <li class="hover:text-red-400 transition-colors">
-      <a href="/today-i-learned">Blog</a>
-    </li>
-  </ul>
-  <ul class="flex items-center gap-4">
-    <li class="size-[22px]">
-      <button class="hover:text-red-400 transition-colors">
-        <DarkMode />
-      </button>
-    </li>
-    <li class="size-[22px]">
-      <button class="hover:text-red-400 transition-colors">
-        <Language />
-      </button>
-    </li>
-  </ul>
+<nav
+  class="flex mx-auto w-fit items-center sticky gap-4 top-2 text-neutral-300 transition-all border border-transparent px-8 py-2 mt-2 rounded-full"
+>
+  <a href="#experience" class="hover:text-red-400 transition-colors">Experience</a>
+  <a href="#projects" class="hover:text-red-400 transition-colors">Projects</a>
+  <a href="#contact" class="hover:text-red-400 transition-colors">Contact</a>
+  <a href="/today-i-learned" class="hover:text-red-400 transition-colors">Blog</a>
+  <button class="size-[20px] hover:text-red-400 transition-colors">
+    <DarkMode />
+  </button>
+  <button class="size-[20px] hover:text-red-400 transition-colors">
+    <Language />
+  </button>
 </nav>
+
+<script>
+  const scrollThreshold = 50
+
+  window.addEventListener('scroll', () => {
+    const $nav = document.querySelector('nav')
+
+    const classedToAdd = ['bg-neutral-900', 'shadow-lg', 'border-neutral-800']
+    const classedToRemove = ['bg-transparent', 'border-transparent']
+
+    if (window.scrollY > scrollThreshold) {
+      $nav?.classList.add(...classedToAdd)
+      $nav?.classList.remove(...classedToRemove)
+    } else {
+      $nav?.classList.add(...classedToRemove)
+      $nav?.classList.remove(...classedToAdd)
+    }
+  })
+</script>
