@@ -2,10 +2,17 @@
 import Layout from '@/layouts/Layout.astro'
 import Header from '@/components/Header.astro'
 import Footer from '@/components/Footer.astro'
+import Experience from '@/components/Experience.astro'
+import Projects from '@/components/Projects.astro'
+import Contact from '@/components/Contact.astro'
 ---
 
 <Layout title="Franco Lloveras - Porfolio">
   <Header />
-  <main>MAIN</main>
+  <main class="space-y-96">
+    <Experience />
+    <Projects />
+    <Contact />
+  </main>
   <Footer />
 </Layout>
