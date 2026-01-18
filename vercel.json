@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/today-i-learned/:path*",
+      "destination": "https://today-i-learned-franco-lloveras.vercel.app/:path*"
+    },
+    {
+      "source": "/typing-game/:path*",
+      "destination": "https://typing-game-franco-lloveras.vercel.app/:path*"
+    },
+    {
+      "source": "/spin-wheel/:path*",
+      "destination": "https://spin-wheel-franco-lloveras.vercel.app/:path*"
+    },
+    {
+      "source": "/bouncing-dvd/:path*",
+      "destination": "https://bouncing-dvd-franco-lloveras.vercel.app/:path*"
+    },
+    {
+      "source": "/nextjs-store/:path*",
+      "destination": "https://nextjs-store-franco-lloveras.vercel.app/:path*"
+    }
+  ]
+}
