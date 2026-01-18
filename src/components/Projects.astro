@@ -1,0 +1,80 @@
+---
+import Section from '@/layouts/Section.astro'
+import Code from '@/icons/Code.astro'
+import { getDictionary } from '@/i18n/utils'
+import ProjectCard from '@/components/ProjectCard.astro'
+import ProjectMiniCard from '@/components/ProjectMiniCard.astro'
+import NextJS from '@/components/badges/NextJS.astro'
+import TailwindCSS from '@/components/badges/TailwindCSS.astro'
+import HTML from '@/components/badges/HTML.astro'
+import JavaScript from '@/components/badges/JavaScript.astro'
+import ExpressJS from '@/components/badges/ExpressJS.astro'
+import NodeJS from '@/components/badges/NodeJS.astro'
+
+const dict = getDictionary(Astro.params.locale as 'en' | 'es')
+---
+
+<Section id="projects" title={dict['projects.title']}>
+  <Code slot="icon" class="size-6 inline-block" />
+  <div class="mt-8 space-y-8">
+    <ProjectCard
+      title="Typing Game"
+      description={dict['project.typing-game.description']}
+      imageURL="https://github.com/francolloveras/typing-game/blob/main/demo.png?raw=true"
+      codeURL="https://github.com/francolloveras/typing-game"
+      previewURL="https://francolloveras.com/typing-game"
+    >
+      <HTML slot="badge" />
+      <JavaScript slot="badge" />
+    </ProjectCard>
+    <ProjectCard
+      title="Spin Wheel"
+      description={dict['project.spin-wheel.description']}
+      imageURL="https://github.com/francolloveras/spin-wheel/blob/main/demo.png?raw=true"
+      codeURL="https://github.com/francolloveras/spin-wheel"
+      previewURL="https://francolloveras.com/spin-wheel"
+    >
+      <HTML slot="badge" />
+      <JavaScript slot="badge" />
+    </ProjectCard>
+    <div class="grid grid-cols-3 gap-x-4 gap-y-8">
+      <ProjectMiniCard
+        title="NextJS Recharts"
+        description={dict['project.nextjs-recharts.description']}
+        imageURL="https://github.com/francolloveras/nextjs-recharts/blob/master/public/demo.png?raw=true"
+        codeURL="https://github.com/francolloveras/nextjs-recharts"
+        previewURL=""
+      >
+        <NextJS slot="badge" />
+        <TailwindCSS slot="badge" />
+      </ProjectMiniCard>
+      <ProjectMiniCard
+        title="Express API"
+        description={dict['project.express-api.description']}
+        imageURL="https://github.com/francolloveras/bouncing-dvd/blob/main/demo.png?raw=true"
+        codeURL="https://github.com/francolloveras/express-api"
+      >
+        <ExpressJS slot="badge" />
+        <NodeJS slot="badge" />
+      </ProjectMiniCard>
+      <ProjectMiniCard
+        title="Crypt"
+        description={dict['project.crypt.description']}
+        imageURL="/projects/crypt.png"
+        codeURL="https://github.com/francolloveras/crypt"
+      >
+        <NodeJS slot="badge" />
+      </ProjectMiniCard>
+      <ProjectMiniCard
+        title="Bouncing DVD"
+        description={dict['project.bouncing-dvd.description']}
+        imageURL="https://github.com/francolloveras/bouncing-dvd/blob/main/demo.png?raw=true"
+        codeURL="https://github.com/francolloveras/bouncing-dvd"
+        previewURL="https://francolloveras.com/bouncing-dvd"
+      >
+        <HTML slot="badge" />
+        <JavaScript slot="badge" />
+      </ProjectMiniCard>
+    </div>
+  </div>
+</Section>

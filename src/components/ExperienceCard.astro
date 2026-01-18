@@ -1,0 +1,28 @@
+---
+interface Props {
+  date: string
+  position: string
+  company: string
+  description: string
+}
+
+const { date, position, company, description } = Astro.props
+---
+
+<div class="flex gap-x-4">
+  <p class="min-w-36 max-w-36 text-right text-neutral-400">{date}</p>
+  <div
+    class="relative flex gap-x-4 before:left-1.5 before:-z-10 pb-12 before:block before:w-0.5 before:h-full before:absolute before:bg-neutral-700"
+  >
+    <div class="bg-green-400 mt-1.5 rounded-full aspect-square size-3.5"></div>
+    <div>
+      <div class="mb-4">
+        <h3 class="font-medium text-green-400 text-xl">{position}</h3>
+        <p class="text-neutral-400">{company}</p>
+      </div>
+      <p class="text-neutral-300">
+        {description}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+---
+import Section from '@/layouts/Section.astro'
+import Briefcase from '@/icons/Briefcase.astro'
+import ExperienceCard from './ExperienceCard.astro'
+import { getDictionary } from '@/i18n/utils'
+
+const dict = getDictionary(Astro.params.locale as 'en' | 'es')
+---
+
+<Section id="experience" title={dict['experience.title']}>
+  <Briefcase slot="icon" class="size-6 inline-block" />
+  <div class="mt-8">
+    <ExperienceCard
+      date={dict['experience.netse.date']}
+      position={dict['experience.netse.position']}
+      company={dict['experience.netse.company']}
+      description={dict['experience.netse.description']}
+    />
+    <ExperienceCard
+      date={dict['experience.indicom.date']}
+      position={dict['experience.indicom.position']}
+      company={dict['experience.indicom.company']}
+      description={dict['experience.indicom.description']}
+    />
+  </div>
+</Section>

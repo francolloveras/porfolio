@@ -1,0 +1,84 @@
+---
+import Language from '@/icons/Language.astro'
+import Check from '@/icons/Check.astro'
+import { getDictionary } from '@/i18n/utils'
+
+const locale = Astro.params.locale as 'en' | 'es'
+
+const dict = getDictionary(locale)
+---
+
+<nav
+  class="flex mx-auto z-50 w-fit items-center sticky gap-4 top-2 text-neutral-300 transition-all border border-transparent px-8 py-2 mt-2 rounded-full"
+>
+  <a href="#experience" class="hover:text-green-400 transition-colors">{dict['nav.experience']}</a>
+  <a href="#projects" class="hover:text-green-400 transition-colors">{dict['nav.projects']}</a>
+  <a href="mailto:francorlloveras@gmail.com" class="hover:text-green-400 transition-colors">
+    {dict['nav.contact']}
+  </a>
+  <a
+    href="https://francolloveras.com/today-i-learned"
+    class="hover:text-green-400 transition-colors"
+    target="_blank"
+  >
+    Blog
+  </a>
+  <div class="relative size-[20px]">
+    <button id="language" class="hover:text-green-400 transition-colors">
+      <Language />
+    </button>
+    <div
+      id="dropdown"
+      class="absolute hidden text-sm bg-neutral-800 border w-32 border-neutral-700 rounded-md p-1"
+    >
+      <a
+        href="/en"
+        class="flex items-center justify-between gap-x-2.5 rounded px-2 py-1.5 hover:bg-neutral-700 transition-colors"
+        style={`font-weight: ${locale === 'en' ? 500 : 0}`}
+      >
+        {dict['nav.language.en']}
+        {locale === 'en' && <Check class="size-3.5" />}
+      </a>
+      <a
+        href="/es"
+        class="flex items-center justify-between gap-x-2.5 rounded px-2 py-1.5 hover:bg-neutral-700 transition-colors"
+        style={`font-weight: ${locale === 'es' ? 500 : 0}`}
+      >
+        {dict['nav.language.es']}
+        {locale === 'es' && <Check class="size-3.5" />}
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const scrollThreshold = 50
+
+  window.addEventListener('scroll', () => {
+    const $nav = document.querySelector('nav')
+
+    const classedToAdd = ['bg-neutral-800', 'shadow-lg', 'border-neutral-700']
+    const classedToRemove = ['bg-transparent', 'border-transparent']
+
+    if (window.scrollY > scrollThreshold) {
+      $nav?.classList.add(...classedToAdd)
+      $nav?.classList.remove(...classedToRemove)
+    } else {
+      $nav?.classList.add(...classedToRemove)
+      $nav?.classList.remove(...classedToAdd)
+    }
+  })
+
+  const $language = document.getElementById('language')
+  const $dropdown = document.getElementById('dropdown')
+
+  $language?.addEventListener('click', () => {
+    $dropdown?.classList.toggle('hidden')
+  })
+
+  document.addEventListener('click', (event) => {
+    if (!$language?.contains(event.target as Node) && !$dropdown?.contains(event.target as Node)) {
+      $dropdown?.classList.add('hidden')
+    }
+  })
+</script>

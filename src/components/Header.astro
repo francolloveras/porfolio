@@ -1,0 +1,47 @@
+---
+import LinkedIn from '@/icons/LinkedIn.astro'
+import GitHub from '@/icons/GitHub.astro'
+import { getDictionary } from '@/i18n/utils'
+
+const dict = getDictionary(Astro.params.locale as 'en' | 'es')
+---
+
+<header class="flex items-center justify-center gap-x-24">
+  <div class="max-w-md">
+    <p class="text-neutral-300">{dict['header.subtitle']}</p>
+    <h1 class="text-4xl font-medium">
+      {dict['header.title.im']}
+      <span class="text-green-400">{dict['header.title.name']}</span>
+      <br />
+      {dict['header.title.role']}.
+    </h1>
+    <p class="text-neutral-300 mt-4 text-lg">
+      {dict['header.description.1']}
+      <span class="text-green-400">{dict['header.description.2']}</span>.
+      {dict['header.description.3']}
+    </p>
+    <div class="mt-6 flex items-center gap-x-4">
+      <a
+        href="https://github.com/francolloveras"
+        target="_blank"
+        referrerpolicy="no-referrer"
+        class="px-6 py-1 rounded-full text-nowrap flex items-center gap-x-2 border border-neutral-700 bg-neutral-800 shadow hover:bg-neutral-100 hover:text-neutral-950 transition-colors"
+      >
+        <GitHub class="size-4" />
+        GitHub
+      </a>
+      <a
+        href="https://www.linkedin.com/in/franco-lloveras-3562722b2"
+        target="_blank"
+        referrerpolicy="no-referrer"
+        class="px-6 py-1 rounded-full text-nowrap flex items-center gap-x-2 border border-neutral-700 bg-neutral-800 shadow hover:bg-neutral-100 hover:text-neutral-950 transition-colors"
+      >
+        <LinkedIn class="size-4" />
+        LinkedIn
+      </a>
+    </div>
+  </div>
+  <div class="size-60">
+    <img src="/profile-picture.jpg" alt="Franco Lloveras" class="rounded-full shadow" />
+  </div>
+</header>
