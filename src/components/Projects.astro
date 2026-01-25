@@ -10,6 +10,7 @@ import HTML from '@/components/badges/HTML.astro'
 import JavaScript from '@/components/badges/JavaScript.astro'
 import ExpressJS from '@/components/badges/ExpressJS.astro'
 import NodeJS from '@/components/badges/NodeJS.astro'
+import ReactJS from '@/components/badges/ReactJS.astro'
 
 const dict = getDictionary(Astro.params.locale as 'en' | 'es')
 ---
@@ -17,6 +18,16 @@ const dict = getDictionary(Astro.params.locale as 'en' | 'es')
 <Section id="projects" title={dict['projects.title']}>
   <Code slot="icon" class="size-6 inline-block" />
   <div class="mt-8 space-y-8">
+    <ProjectCard
+      title="Form carousel"
+      description={dict['project.form-carousel.description']}
+      imageURL="https://github.com/francolloveras/form-carousel/blob/main/public/demo.png?raw=true"
+      codeURL="https://github.com/francolloveras/form-carousel"
+      previewURL="https://francolloveras.com/form-carousel"
+    >
+      <ReactJS slot="badge" />
+      <TailwindCSS slot="badge" />
+    </ProjectCard>
     <ProjectCard
       title="Typing Game"
       description={dict['project.typing-game.description']}

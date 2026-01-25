@@ -26,6 +26,8 @@ export default {
   'projects.title': 'Proyectos',
   'project.typing-game.description':
     'Prueba de escritura con un selector de idiomas y un temporizador personalizable.',
+  'project.form-carousel.description':
+    'Formulario de varios pasos creado con React Hook Form y validación Zod.',
   'project.spin-wheel.description':
     'Juego para agregar y quitar opciones en una ruleta, creado usando la API de Canvas y JavaScript nativo.',
   'project.nextjs-recharts.description': 'Ejemplo de uso de la librería Recharts con Next.js.',
