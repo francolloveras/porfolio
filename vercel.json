@@ -19,6 +19,10 @@
     {
       "source": "/nextjs-store/:path*",
       "destination": "https://nextjs-store-franco-lloveras.vercel.app/:path*"
+    },
+    {
+      "source": "/form-carousel/:path*",
+      "destination": "https://form-carousel-franco-lloveras.vercel.app/:path*"
     }
   ]
 }
