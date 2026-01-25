@@ -22,7 +22,7 @@
     },
     {
       "source": "/form-carousel/:path*",
-      "destination": "https://form-carousel-franco-lloveras.vercel.app/:path*"
+      "destination": "https://form-carousel.vercel.app/:path*"
     }
   ]
 }
