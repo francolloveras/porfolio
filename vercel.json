@@ -17,8 +17,8 @@
       "destination": "https://bouncing-dvd-franco-lloveras.vercel.app/:path*"
     },
     {
-      "source": "/nextjs-store/:path*",
-      "destination": "https://nextjs-store-franco-lloveras.vercel.app/:path*"
+      "source": "/nextjs-recharts/:path*",
+      "destination": "https://nextjs-recharts-ivory.vercel.app/:path*"
     },
     {
       "source": "/form-carousel/:path*",
