@@ -23,6 +23,10 @@
     {
       "source": "/form-carousel/:path*",
       "destination": "https://form-carousel.vercel.app/:path*"
+    },
+    {
+      "source": "/rich-text-editor/:path*",
+      "destination": "https://rich-text-editor-lime.vercel.app/:path*"
     }
   ]
 }
