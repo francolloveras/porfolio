@@ -29,6 +29,16 @@ const dict = getDictionary(Astro.params.locale as 'en' | 'es')
       <TailwindCSS slot="badge" />
     </ProjectCard>
     <ProjectCard
+      title="Rich Text Editor"
+      description={dict['project.rich-text-editor.description']}
+      imageURL="https://github.com/francolloveras/rich-text-editor/blob/main/public/demo.png?raw=true"
+      codeURL="https://github.com/francolloveras/rich-text-editor"
+      previewURL="https://francolloveras.com/rich-text-editor"
+    >
+      <ReactJS slot="badge" />
+      <TailwindCSS slot="badge" />
+    </ProjectCard>
+    <ProjectCard
       title="Typing Game"
       description={dict['project.typing-game.description']}
       imageURL="https://github.com/francolloveras/typing-game/blob/main/demo.png?raw=true"

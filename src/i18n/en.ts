@@ -28,6 +28,8 @@ export default {
     'Test your typing speed with this game that includes a language selector and a customizable timer.',
   'project.form-carousel.description':
     'A demo of a multi-step Form Carousel build with React Hook Form and Zod validation.',
+  'project.rich-text-editor.description':
+    'Powerful Rich Text Editor with shortcuts, link insertion, form data handle, and image system.',
   'project.spin-wheel.description':
     'Game about add and remove options into a spin wheel, create using canvas API and native JavaScript.',
   'project.nextjs-recharts.description': 'Example of using the Recharts library with Next.js.',
