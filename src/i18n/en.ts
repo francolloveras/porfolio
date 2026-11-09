@@ -32,6 +32,8 @@ export default {
     'Powerful Rich Text Editor with shortcuts, link insertion, form data handle, and image system.',
   'project.spin-wheel.description': 'Game about add and remove options into a spin wheel.',
   'project.nextjs-recharts.description': 'Example of using the Recharts library with Next.js.',
+  'project.gamepad-tester.description':
+    'A simple gamepad tester to check button and axis functionality.',
   'project.express-api.description': 'API with Express.js based on REST architectural.',
   'project.crypt.description': 'Utility class for encrypting and decrypting values.',
   'project.ssh-client.description':

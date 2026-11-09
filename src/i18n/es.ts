@@ -32,6 +32,8 @@ export default {
     'Editor de texto con atajos de teclado, inserción de enlaces, datos de formulario y manejo de imágenes.',
   'project.spin-wheel.description': 'Juego para agregar y quitar opciones en una ruleta.',
   'project.nextjs-recharts.description': 'Ejemplo de uso de la librería Recharts con Next.js.',
+  'project.gamepad-tester.description':
+    'Un simple tester de joystick para verificar la funcionalidad de botones y sticks.',
   'project.express-api.description': 'API con Express.js basada en la arquitectura REST.',
   'project.crypt.description': 'Clase utilitaria para encriptar y desencriptar valores.',
   'project.ssh-client.description':

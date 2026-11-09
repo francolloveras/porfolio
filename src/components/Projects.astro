@@ -58,6 +58,16 @@ const dict = getDictionary(Astro.params.locale as 'en' | 'es')
       <NextJS slot="badge" />
       <TailwindCSS slot="badge" />
     </ProjectCard>
+    <ProjectCard
+      title="Gamepad Tester"
+      description={dict['project.gamepad-tester.description']}
+      imageURL="https://github.com/francolloveras/gamepad-tester/blob/main/public/demo.png?raw=true"
+      codeURL="https://github.com/francolloveras/gamepad-tester"
+      previewURL="https://francolloveras.com/gamepad-tester"
+    >
+      <ReactJS slot="badge" />
+      <TailwindCSS slot="badge" />
+    </ProjectCard>
     <div class="grid grid-cols-3 gap-x-4 gap-y-8">
       <ProjectMiniCard
         title="Spin Wheel"
