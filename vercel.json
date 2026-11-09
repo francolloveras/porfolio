@@ -34,6 +34,10 @@
     {
       "source": "/rich-text-editor/:path*",
       "destination": "https://rich-text-editor-lime.vercel.app/:path*"
+    },
+    {
+      "source": "/gamepad-tester/:path*",
+      "destination": "https://gamepad-tester-kappa.vercel.app/:path*"
     }
   ]
 }
