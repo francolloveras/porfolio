@@ -69,6 +69,14 @@ const dict = getDictionary(Astro.params.locale as 'en' | 'es')
         <HTML slot="badge" />
         <JavaScript slot="badge" />
       </ProjectMiniCard>
+      <ProjectMiniCard
+        title="SSH Client"
+        description={dict['project.ssh-client.description']}
+        imageURL="https://github.com/francolloveras/ssh-client/blob/master/demo.png?raw=true"
+        codeURL="https://github.com/francolloveras/ssh-client"
+      >
+        <NodeJS slot="badge" />
+      </ProjectMiniCard>
       <!-- <ProjectMiniCard
         title="Express API"
         description={dict['project.express-api.description']}

@@ -35,5 +35,7 @@ export default {
   'project.nextjs-recharts.description': 'Example of using the Recharts library with Next.js.',
   'project.express-api.description': 'API with Express.js based on REST architectural.',
   'project.crypt.description': 'Utility class for encrypting and decrypting values.',
+  'project.ssh-client.description':
+    'A TypeScript SSH client for running commands in interactive SSH shells.',
   'project.bouncing-dvd.description': 'A simple DVD bouncing animation using canvas.'
 } as const
