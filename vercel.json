@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/es",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/today-i-learned/:path*",

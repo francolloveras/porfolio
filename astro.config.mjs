@@ -10,7 +10,6 @@ export default defineConfig({
     locales: ["es", "en"],
   },
   redirects: {
-    '/': '/es',
     '/profile-picture': '/profile-picture.jpg',
   }
 })
